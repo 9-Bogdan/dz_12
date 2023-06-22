@@ -21,14 +21,14 @@ class AddressBook(UserDict):
             with open(filename, "wb") as f:
                 pickle.dump(self.data, f)
         else:
-            raise ValueError("File the file must have an extension '.bin'")
+            raise ValueError("The file must have an extension '.bin'")
 
     def load_from_file(self, filename):
         if filename.endswith(".bin"):
             with open(filename, "rb") as f:
                 self.data = pickle.load(f)
         else:
-            raise ValueError("File the file must have an extension '.bin'")
+            raise ValueError("The file must have an extension '.bin'")
 
     def find_user(self, char=None, num=None):
         result = []
